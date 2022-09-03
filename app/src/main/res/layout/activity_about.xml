@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:clipChildren="false"
+android:clipToPadding="false"
+android:orientation="vertical"
+tools:context=".AboutActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_weight="0"
+    android:gravity="top">
+
+    <com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_style_shape"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:paddingStart="0dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="5dp" >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="@string/back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="2dp"
+            android:text="@string/back"
+            android:textAllCaps="true"
+            android:textColor="?colorOnPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:gravity="end"
+        style="@style/label_section"
+        android:text="@string/app_name"
+        />
+
+</LinearLayout>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_margin="15dp"
+    android:layout_width="match_parent"
+    android:layout_weight="1"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/title_item_task"
+            android:text="@string/donate" />
+
+        <ImageButton
+            android:id="@+id/btn_paypal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:foreground="@drawable/round_button"
+            android:scaleType="centerCrop"
+            app:srcCompat="@raw/img_paypal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/title_item_task"
+            android:text="@string/donate_add" />
+
+        <Button
+            android:id="@+id/btn_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_style_shape"
+            android:layout_margin="15dp"
+            app:icon="@drawable/ic_click_ads"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="@string/donate_add_btn"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            style="@style/title_item_task"
+            android:text="@string/about" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            style="@style/desc_item_task"
+            android:text="@string/about_text" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            style="@style/desc_item_task"
+            android:text="@string/about_text_2" />
+        <Button
+            android:id="@+id/btn_go_git"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/link_item_container"
+            android:paddingBottom="2dp"
+            android:text="@string/git_go" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/title_item_task"
+            android:text="@string/rate" />
+        <Button
+            android:id="@+id/btn_go_play_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/link_item_container"
+            android:text="@string/rate_go" />
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

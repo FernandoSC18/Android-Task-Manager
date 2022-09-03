@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- PREFERENCES -->
+
+    <!-- Titles -->
+    <string name="title_home">Tasks</string>
+    <string name="title_finish">Finish Task</string>
+    <string name="title_settings">Settings</string>
+    <!-- OPTIONS -->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <!-- Buttons -->
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="add">Add</string>
+    <string name="go">Go</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="back">Back</string>
+    <string name="save">Save</string>
+    <string name="copy">Copy</string>
+    <string name="settings">Settings</string>
+    <string name="move">Move</string>
+
+    <!-- APP COMMONS -->
+    <string name="task">Task</string>
+    <string name="tasks">Tasks</string>
+    <string name="name_empty">Please write a name for this Task </string>
+    <string name="priority_empty">Please select a priority for this Task </string>
+
+    <!-- HOME -->
+    <string name="add_new_task">Add a new task</string>
+    <string name="hint_detail">Detail …</string>
+    <string name="hint_name">name</string>
+    <string name="detail">Task Description</string>
+    <string name="task_priority">Task priority</string>
+    <string name="task_name">Task name (max 50) </string>
+    <string name="normal">Normals</string>
+    <string name="important">Important</string>
+    <string name="empty_task">All task are complete. Add a new task with the button in right bottom corner </string>
+    <string name="empty_task_finish">Your task history is empty right now </string>
+
+    <!-- ACTIVITY DETAILS -->
+    <string name="label_status">Status :</string>
+    <string name="label_priority">Priority :</string>
+    <string name="label_date_created">Created :</string>
+    <string name="label_date_finish">Finished :</string>
+    <string name="active">Active </string>
+    <string name="finalized">Finalized </string>
+
+    <!-- ALERTS -->
+    <string name="alert_finish">You are about to finish this task, it means this task will be moved to finish tasks, do you want to continue?</string>
+    <string name="alert_delete">You are about to delete this task forever, do you want to continue?</string>
+
+
+    <!-- SETTINGS -->
+    <string name="system">System </string>
+    <string name="about">About</string>
+    <string name="swiped">When a task is swiped</string>
+    <string name="swiped_ask_finish">Ask to finish</string>
+    <string name="swiped_ask_delete">Ask to Delete</string>
+    <string name="priorities">Set your priority list (there should be at least one), to reorder, press and hold</string>
+    <string name="priorities_add">Add new priority</string>
+    <string name="priorities_edit">Edit priority</string>
+    <string name="priorities_e">Enable</string>
+    <string name="priorities_d">Disable</string>
+    <string name="priorities_e_delete">Enable delete</string>
+    <string name="priorities_d_delete">Disable delete</string>
+    <string name="orientation">Orientation </string>
+    <string name="lock_orientation">Lock current orientation</string>
+    <string name="priority_name">name</string>
+    <string name="name_priority_empty">Please write a name for this Priority </string>
+    <string name="name_priority_unique">Already there is a priority with same name</string>
+    <string name="name_priority_in_use">Some tasks are active, first finish these tasks and then try again</string>
+    <string name="name_priority_one_at_least">There Should be at least one</string>
+
+    <!-- ABOUT -->
+    <string name="donate">Donate </string>
+    <string name="donate_add_wait">Ad is loading now </string>
+    <string name="donate_add_btn">Watch an ad </string>
+    <string name="donate_add">Donate by Watch an ad </string>
+    <string name="about_text">Free, Make with love &#10084;&#65039;. Manage all your task, easy to create, move, edit and finish task </string>
+    <string name="about_text_2">This is a free and public project, if you want shared an comment to improvement, improvement the project or if you want download the project visit below GitHub Link </string>
+    <string name="git_go"><u>Go to GitHub Project </u></string>
+    <string name="rate">Rate on PlayStore </string>
+    <string name="rate_go"><u>Go to PlayStore </u></string>
+    <string name="thanks_title">Thank you</string>
+    <string name="add_error_1">Sorry, one error happen, try again later</string>
+    <string name="thanks">Thank you very much for your support, I\'d give you a kiss if you wanted but today isn\'t your lucky day, anyway remember to come back again. </string>
+
+</resources>

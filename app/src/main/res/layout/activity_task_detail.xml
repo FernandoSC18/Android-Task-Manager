@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    tools:context=".TaskDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_weight="0"
+        android:gravity="top">
+
+        <com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_style_shape"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:paddingStart="0dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"
+                android:src="@drawable/ic_arrow_back"
+                android:contentDescription="@string/back" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"
+                android:text="@string/back"
+                android:textAllCaps="true"
+                android:textColor="?colorOnPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidth="0dp"
+            app:hintTextAppearance="@style/input_label_hint"
+            app:errorTextAppearance="@style/input_layout_error"
+            app:counterMaxLength="50"
+            android:id="@+id/til_title">
+
+            <com.fscsoftware.managetasks.ui.custom_views.EditTextMultiLine
+
+                android:id="@+id/et_title"
+                style="@style/label_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:background="@color/transparent"
+                android:inputType="textMultiLine"
+                android:textSize="22sp"
+                android:maxLength="50"
+                android:textAlignment="textEnd"
+                android:gravity="end"
+                android:paddingEnd="0dp"
+                android:paddingTop="22dp"
+                android:paddingStart="15dp"
+                android:hint="@string/hint_name"
+                tools:text="title"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:orientation="horizontal" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/title_item_task"
+                        android:text="@string/label_status" />
+                    <Spinner
+                        android:id="@+id/spinner_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/title_item_task"
+                        android:text="@string/label_date_created" />
+                    <TextView
+                        android:id="@+id/tv_created"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="15 august 5042" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/title_item_task"
+                        android:text="@string/label_priority" />
+                    <Spinner
+                        android:id="@+id/spinner_detail_priority"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_label_finished"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/title_item_task"
+                        android:text="@string/label_date_finish" />
+                    <TextView
+                        android:id="@+id/tv_finished"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="27 July 2070" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:orientation="vertical" >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeWidth="0dp"
+                    app:hintTextAppearance="@style/input_label_hint"
+                    app:errorTextAppearance="@style/input_layout_error" >
+                    <EditText
+                        android:id="@+id/et_details"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:textSize="20sp"
+                        android:inputType="textMultiLine"
+                        android:hint="@string/detail"
+                        android:background="@color/transparent"
+                        android:enabled="false"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:clickable="true"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        >
+        <!--
+        <com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton
+            android:id="@+id/btn_copy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_style_shape"
+            android:clickable="true"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"
+                android:src="@drawable/ic_file_copy"
+                android:contentDescription="@string/copy" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"
+                android:text="@string/copy"
+                android:textAllCaps="true"
+                android:textColor="?colorOnPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton>
+        -->
+
+        <com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton
+            android:id="@+id/btn_save_or_delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_style_shape"
+            android:clickable="true"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/text_save_or_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"
+                tools:text="@string/save"
+                android:textAllCaps="true"
+                android:textColor="?colorOnPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton>
+
+    </LinearLayout>
+
+</LinearLayout>

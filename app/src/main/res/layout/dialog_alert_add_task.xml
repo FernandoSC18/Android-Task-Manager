@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintTextAppearance="@style/input_label_hint"
+        app:errorTextAppearance="@style/input_layout_error"
+        app:boxStrokeWidth="0dp"
+        app:counterMaxLength="50"
+        app:counterEnabled="true"
+        android:id="@+id/til_title">
+
+        <com.fscsoftware.managetasks.ui.custom_views.EditTextMultiLine
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:paddingEnd="0dp"
+            android:paddingStart="0dp"
+            android:ems="10"
+            android:textSize="20sp"
+            android:inputType="textMultiLine"
+            android:maxLength="50"
+            android:hint="@string/task_name"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/task_priority" />
+    <Spinner
+        android:id="@+id/spinner_priority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidth="0dp"
+        app:hintTextAppearance="@style/input_label_hint" >
+        <EditText
+            android:id="@+id/et_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:paddingEnd="0dp"
+            android:paddingStart="0dp"
+            android:textSize="20sp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:hint="@string/detail"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</LinearLayout>

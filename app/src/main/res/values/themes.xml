@@ -1,0 +1,48 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="shadow">#000000</color>
+    <!-- Base application theme. -->
+    <style name="Theme.ManageTasks" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryLightColor</item>
+        <item name="colorPrimaryVariant">@color/primaryColor</item>
+        <item name="colorOnPrimary">@color/primaryTextColor</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryLightColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryColor</item>
+        <item name="colorOnSecondary">@color/secondaryTextColor</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="background" >@color/white</item>
+
+        <item name="android:textViewStyle">@style/textViewStyle</item>
+        <item name="editTextStyle">@style/editTextViewStyle</item>
+    </style>
+
+
+    <style name="textViewStyle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="editTextViewStyle" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+    <style name="Widget.MyNiceAppName.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="materialThemeOverlay">
+            @style/ThemeOverlay.App.TextInputEditText.OutlinedBox
+        </item>
+    </style>
+
+    <style name="ThemeOverlay.App.TextInputEditText.OutlinedBox" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="editTextStyle">@style/Widget.App.TextInputEditText.OutlinedBox</item>
+    </style>
+
+    <style name="Widget.App.TextInputEditText.OutlinedBox" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+</resources>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="horizontal"
+        android:gravity="fill"
+        >
+
+        <com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton
+            android:id="@+id/btn_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_style_shape"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="0dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:contentDescription="@string/system"
+                app:tint="?colorOnPrimary"
+                android:src="@drawable/ic_info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="@string/about"
+                android:textAllCaps="true"
+                android:textColor="?colorOnPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton>
+
+
+        <com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton
+            android:id="@+id/btn_system_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/btn_style_shape"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="0dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="@string/system"
+                android:textAllCaps="true"
+                android:textColor="?colorOnPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                app:tint="?colorOnPrimary"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:contentDescription="@string/system"
+                android:src="@drawable/ic_settings" />
+        </com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_margin="15dp"
+            android:orientation="vertical"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--
+            <TextView
+                android:id="@+id/tv_orientation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/label_section"
+                android:text="@string/orientation"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sw_lock_orientation"
+                style="@style/switch_settings_style"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lock_orientation" />
+            -->
+
+            <TextView
+                android:id="@+id/tv_swiped"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/label_section"
+                android:text="@string/swiped"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sw_ask_finish"
+                style="@style/switch_settings_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/swiped_ask_finish" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sw_ask_delete"
+                style="@style/switch_settings_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/swiped_ask_delete" />
+
+            <TextView
+                android:id="@+id/tv_priorities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/label_section"
+                android:text="@string/priorities"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton
+                    android:id="@+id/btn_add_priority"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:background="@drawable/btn_style_shape"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_add_priority"
+                        style="@style/title_item_task"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/priorities_add"
+                        android:textColor="?colorOnPrimary" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tag_btn_style_shape"
+                        android:contentDescription="@string/priorities_add"
+                        app:srcCompat="@drawable/ic_add"
+                        app:tint="?colorOnPrimary" />
+
+                </com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton>
+
+                <com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton
+                    android:id="@+id/btn_enable_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_style_shape"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_enable_delete"
+                        style="@style/title_item_task"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?colorOnPrimary"
+                        android:text="@string/priorities_e" />
+
+                    <TextView
+                        style="@style/title_item_task"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?colorOnPrimary"
+                        android:text="@string/delete" />
+
+                </com.fscsoftware.managetasks.ui.custom_views.LinearLayoutButton>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!--
+              Below RecyclerView works with default layout manager
+              it works better with LinearLayoutManager,
+
+              IF IT IS CHANGE BY CUSTOM LAYOUT MANAGER AS
+              "ui/custom_views/FlowAutoSizeLayout" perhaps be better change code into
+              touch helper "helpers/SwipeHelperPriority", change on onMoved method
+            -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_priorities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:paddingBottom="40dp"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/priority_item" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

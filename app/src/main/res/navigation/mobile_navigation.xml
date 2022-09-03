@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_tasks">
+
+    <fragment
+        android:id="@+id/navigation_tasks"
+        android:name="com.fscsoftware.managetasks.ui.tasks.TasksFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_tasks" />
+
+    <fragment
+        android:id="@+id/navigation_finish_tasks"
+        android:name="com.fscsoftware.managetasks.ui.finish_tasks.FinishTasksFragment"
+        android:label="@string/title_finish"
+        tools:layout="@layout/fragment_finish_tasks" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.fscsoftware.managetasks.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

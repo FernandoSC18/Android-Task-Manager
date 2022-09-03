@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <bool name="preference_default_orientation">false</bool>
+    <bool name="preference_default_swipe_finish">true</bool>
+    <bool name="preference_default_swipe_delete">true</bool>
+</resources>
